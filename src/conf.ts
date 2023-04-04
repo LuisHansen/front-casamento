@@ -1,2 +1,1 @@
-// export const RSVP_BASE_URL = 'https://api-casamento-v3.10rawb540yc2.us-south.codeengine.appdomain.cloud';
-export const RSVP_BASE_URL = 'http://localhost:8080';
+export const RSVP_BASE_URL = process.env.REACT_APP_API_BASEURL;
