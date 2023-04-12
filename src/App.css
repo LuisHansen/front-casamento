@@ -11435,21 +11435,20 @@ p {
 header.masthead {
   min-height: calc(100vh - 209px);
   text-align: center;
-  color: #fff;
-  background-image: url("../public/assets/img/header-bg-2.jpg");
+  color: var(--black-text);
+  background-image: url("../public/assets/img/igreja_aquarela_transparente.png"), url("../public/assets/img/bg_papel-min.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-blend-mode: overlay;
-  background-color: #747474;
+  background-blend-mode: multiply;
 }
 header.masthead .header-bg {
-  background: linear-gradient(0deg, black 0%, rgba(2, 0, 36, 0) 100%);
+  background: linear-gradient(0deg, #eeeeee 0%, #eee0 40%);
   margin: 0 !important;
   max-width: unset !important;
   position: relative;
-  top: calc(100vh - 315px);
+  top: calc(100vh - 491px);
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11467,7 +11466,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead .header-bg {
-    top: calc(100vh - 345px);
+    top: calc(100vh - 503px);
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -11480,6 +11479,9 @@ header.masthead .masthead-heading {
     font-weight: 400;
     line-height: 4.5rem;
   }
+}
+.header-logo > img {
+  width: 20rem;
 }
 #portfolio .portfolio-item {
   max-width: 26rem;
@@ -11812,10 +11814,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 #textinho {
   padding: 2rem 0 !important;
-  background-color: black;
+  background-color: #EEE;
 }
 #textinho p {
-  color: white;
+  color: #212529;
   font-size: 1.3rem;
   max-width: 700px;
   margin: auto !important;
@@ -11858,4 +11860,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   100% {
     transform: rotate(360deg);
   }
+}
+:root {
+  /*Variables*/
+  --black-text: #212529;
 }
