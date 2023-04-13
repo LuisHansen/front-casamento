@@ -11438,17 +11438,17 @@ header.masthead {
   color: var(--black-text);
   background-image: url("../public/assets/img/igreja_aquarela_transparente.png"), url("../public/assets/img/bg_papel-min.png");
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: max(min(100%, 90rem), 70rem), auto;
   background-attachment: fixed;
   background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
 }
 header.masthead .header-bg {
-  background: linear-gradient(0deg, #eeeeee 0%, #eee0 40%);
+  /*background: linear-gradient(0deg, #F8F8F8 0%, #F8F8F800 24%);*/
   margin: 0 !important;
   max-width: unset !important;
   position: relative;
-  top: calc(100vh - 491px);
+  top: calc(100vh - 518px);
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11466,7 +11466,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead .header-bg {
-    top: calc(100vh - 503px);
+    top: calc(100vh - 530px);
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -11479,9 +11479,6 @@ header.masthead .masthead-heading {
     font-weight: 400;
     line-height: 4.5rem;
   }
-}
-.header-logo > img {
-  width: 20rem;
 }
 #portfolio .portfolio-item {
   max-width: 26rem;
@@ -11814,7 +11811,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 #textinho {
   padding: 2rem 0 !important;
-  background-color: #EEE;
+  background-color: #F8F8F8;
+  z-index: 2;
+  position: relative;
 }
 #textinho p {
   color: #212529;
@@ -11853,6 +11852,22 @@ section#contact form#contactForm :-ms-input-placeholder {
   animation: spin 1s linear infinite;
 }
 
+.casal-recortado > img {
+  width: min(25rem, 100%);
+  position: absolute;
+  top: max(-138px, -52%);
+  left: calc(50% - 12rem);
+  z-index: 1;
+}
+
+@media (min-height: 840px) {
+  .casal-recortado > img {
+    top: -312px;
+    width: 30rem;
+    left: calc(50% - 14rem);
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -11864,4 +11879,20 @@ section#contact form#contactForm :-ms-input-placeholder {
 :root {
   /*Variables*/
   --black-text: #212529;
+}
+
+.header-logo {
+  position: relative;
+  z-index: 2;
+}
+
+.header-logo > img {
+  width: min(25rem, 90%);
+}
+
+.masthead-subheading {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 0px 6px white;
 }
