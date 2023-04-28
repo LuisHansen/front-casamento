@@ -3,12 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { RSVP } from './RSVP';
 import reportWebVitals from './reportWebVitals';
-import {CollapsibleMenu} from "./Menu";
-
-// const menu = ReactDOM.createRoot(document.getElementById('menu-react'));
-// menu.render(
-//     <CollapsibleMenu />
-// );
 
 const rsvp = ReactDOM.createRoot(document.getElementById('rsvp-react'));
 rsvp.render(
