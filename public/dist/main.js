@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 
 	'use strict';
 
@@ -33,7 +33,9 @@
 	// Parallax
 	var parallax = function() {
 		if ( !isiPad() || !isiPhone() ) {
-			$(window).stellar();
+			$(window).stellar({
+				horizontalOffset: 50,
+			});
 		}
 	};
 
