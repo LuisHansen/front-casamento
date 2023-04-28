@@ -3,7 +3,7 @@
     position: absolute;
     z-index: 9999;
 }
-@media (min-width: 940px)  {
+@media (min-width: 980px)  {
     .collapsible-menu {
         display: none;
     }
@@ -29,7 +29,6 @@
 input#menu {
     display: none;
 }
-
 
 
 .menu-content {
@@ -64,4 +63,34 @@ input:checked ~ label > .hamburger-container > .bar2 {opacity: 0;}
 
 input:checked ~ label > .hamburger-container > .bar3 {
     transform: translate(0, -8px) rotate(45deg);
+}
+
+.countdown-section * > h2 {
+    color: white !important;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    font-size: 40px !important;
+}
+
+.countdown > div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 2rem;
+    margin: 0 2rem;
+    border: 7px double #718c5b;
+    border-radius: 2rem;
+    background-color: white;
+    color: #718c5b !important;
+}
+
+#dias, #horas, #minutos {
+    font-weight: bold;
+}
+
+#rsvp-react {
+    position: relative;
+    z-index: 99999;
 }

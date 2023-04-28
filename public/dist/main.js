@@ -138,6 +138,48 @@
 		}
 	};
 
+	const countdown = () => {
+		// Definir a data-alvo (07/10/2023 às 17h00)
+		var countDownDate = new Date("2023-10-07T17:00:00.925Z").getTime();
+
+		// Atualiza a contagem regressiva a cada 1 segundo
+		var x = setInterval(function() {
+
+			// Pega a data e hora atual
+			var now = new Date().getTime();
+
+			// Calcula a diferença entre a data-alvo e a data atual
+			var distance = countDownDate - now;
+
+			// Calcula os dias, horas, minutos e segundos restantes
+			var days = String(Math.floor(distance / (1000 * 60 * 60 * 24)));
+			var hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+			var minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+
+			const elementoDias = document.getElementById("dias");
+			const elementoHoras = document.getElementById("horas");
+			const elementoMinutos = document.getElementById("minutos");
+
+			if (elementoDias.innerHTML !== days) {
+				elementoDias.innerHTML = days;
+			}
+
+			if (elementoHoras.innerHTML !== hours) {
+				elementoHoras.innerHTML = hours;
+			}
+
+			if (elementoMinutos.innerHTML !== minutes) {
+				elementoMinutos.innerHTML = minutes;
+			}
+
+			// Se a contagem regressiva terminar, exibe a mensagem
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("countdown").innerHTML = "O casamento foi dia 07/10/2023!";
+			}
+		}, 1000);
+	}
+
 	// Document on load.
 
 	$(function(){
@@ -147,6 +189,7 @@
 		mobileMenuOutsideClick();
 		contentWayPoint();
 		stickyBanner();
+		countdown();
 	});
 
 

@@ -144,7 +144,7 @@ figure {
   color: white !important;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 980px) {
   .header-top .fh5co-link {
     text-align: center;
   }
@@ -177,7 +177,7 @@ figure {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 980px) {
   .header-top .fh5co-social {
     text-align: center !important;
   }
@@ -407,7 +407,7 @@ figure {
   font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 980px) {
   #fh5co-logo {
     width: 100%;
     float: none;
@@ -734,7 +734,7 @@ figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #fh5co-started .form-control {
@@ -1024,7 +1024,7 @@ figure {
   transform: translateX(-240px);
 }
 
-@media screen and (max-width: 940px) {
+@media (max-width: 980px) {
   #fh5co-menu-wrap {
     display: none;
   }
