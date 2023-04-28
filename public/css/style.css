@@ -42,7 +42,6 @@ a:hover {
 }
 
 p, ul, ol {
-  margin-bottom: 1.5em;
   font-size: 16px;
   color: #848484;
   font-family: "Open Sans", Arial, sans-serif;
@@ -413,6 +412,10 @@ figure {
     width: 100%;
     float: none;
     text-align: center;
+  }
+  .nav-header {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

@@ -1,0 +1,67 @@
+.collapsible-menu {
+    float: right;
+    position: absolute;
+    z-index: 9999;
+}
+@media (min-width: 768px)  {
+    .collapsible-menu {
+        display: none;
+    }
+}
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.collapsible-menu a {
+    display:block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.collapsible-menu label {
+    font-size: 56px;
+    cursor: pointer;
+    height: 98px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+input#menu {
+    display: none;
+}
+
+
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+}
+/* Toggle Effect */
+
+input:checked ~ .menu-content {
+    max-height: 100%;
+    background-color: white;
+}
+
+.hamburger-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+input:checked ~ label > .hamburger-container > .bar1 {
+    transform: translate(0, 8px) rotate(-45deg);
+}
+
+input:checked ~ label > .hamburger-container > .bar2 {opacity: 0;}
+
+input:checked ~ label > .hamburger-container > .bar3 {
+    transform: translate(0, -8px) rotate(45deg);
+}

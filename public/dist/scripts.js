@@ -507,7 +507,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 			over = function () {
 				var $this = $(this),
 					o = getOptions($this);
-				clearTimeout(o.sfTimer);
 				$this.siblings().superfish('hide').end().superfish('show');
 			},
 			out = function () {
@@ -517,7 +516,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 					$.proxy(close, $this, o)();
 				}
 				else {
-					clearTimeout(o.sfTimer);
 					o.sfTimer = setTimeout($.proxy(close, $this, o), o.delay);
 				}
 			},
@@ -588,7 +586,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 						return false;
 					}
 					$hasPopUp = $this.find(o.popUpSelector).parent('li');
-					clearTimeout(o.sfTimer);
 					toggleMenuClasses($this, o);
 					toggleAnchorClass($hasPopUp);
 					toggleTouchAction($this);

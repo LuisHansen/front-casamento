@@ -59,9 +59,14 @@
 
   <link rel="stylesheet" href="css/font.css">
 
+  <link rel="stylesheet" href="css/custom.css">
 
-  <!-- Modernizr JS -->
+  <script src="dist/jquery.min.js"></script>
+  <script src="dist/jquery.easing.1.3.js"></script>
+  <script src="dist/jquery.magnific-popup.min.js"></script>
+  <script src="dist/jquery.stellar.min.js"></script>
   <script src="dist/modernizr-2.6.2.min.js"></script>
+  <script src="dist/superfish.js"></script>
 
 </head>
 <body>
@@ -90,14 +95,28 @@
     <header id="fh5co-header-section" class="sticky-banner">
       <div class="container">
         <div class="nav-header">
-          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
           <h1 id="fh5co-logo"><a href="index.html">Bia & Lu</a></h1>
-          <!-- START #fh5co-menu-wrap -->
+          <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+              <div class="hamburger-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            </label>
+            <div class="menu-content">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Confirme sua presença</a></li>
+                <li><a href="#">Quando & Local</a></li>
+                <li><a href="#">Os noivos</a></li>
+              </ul>
+            </div>
+          </div>
           <nav id="fh5co-menu-wrap" role="navigation">
-            <ul class="sf-menu" id="fh5co-primary-menu">
-              <li class="active"><a href="index.html" >Home</a></li>
-
-              </li>
+            <ul class="sf-menu sf-js-enabled sf-arrows" id="fh5co-primary-menu" style="touch-action: pan-y;">
+              <li class="active"><a href="index.html">Home</a></li>
               <li><a href="when-where.html">Quando &amp; Local</a></li>
               <li><a href="guest.html">Convidados</a></li>
               <li><a href="gallery.html">Galeria</a></li>
@@ -266,18 +285,12 @@
 
 <!-- jQuery -->
 <script src="dist/bootstrap.min.js"></script>
-<script src="dist/google_map.js"></script>
 <script src="dist/hoverIntent.js"></script>
-<script src="dist/jquery.easing.1.3.js"></script>
-<script src="dist/jquery.magnific-popup.min.js"></script>
-<script src="dist/jquery.min.js"></script>
-<script src="dist/jquery.stellar.min.js"></script>
 <script src="dist/magnific-popup-options.js"></script>
-<script src="dist/main.js"></script>
 <script src="dist/respond.min.js"></script>
 <script src="dist/scripts.js"></script>
 <script src="dist/sticky.js"></script>
-<script src="dist/superfish.js"></script>
+<script src="dist/main.js"></script>
 </body>
 </html>
 
