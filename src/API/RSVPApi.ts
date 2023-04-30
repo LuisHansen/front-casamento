@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { RSVP_BASE_URL } from '../conf';
 
-type Convidado = {
+export type Convidado = {
     _id: any;
     nome: string;
     confirmado: boolean;
@@ -10,6 +10,7 @@ type Convidado = {
 
 export type Familia = {
     id: string;
+    nome: string;
     convidados: Convidado[];
 }
 

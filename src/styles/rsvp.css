@@ -1,0 +1,334 @@
+.rsvp {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.guest_confirm_form {
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+}
+
+.guest_profile {
+    display: flex;
+    /* background-color: #f7faf7; */
+    padding: 2rem;
+    /* margin: 0 0 1rem 0; */
+    align-items: center;
+    /* border-radius: 8px; */
+    user-select: none;
+    cursor: pointer;
+    /* border: 2px solid; */
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.guest_list {
+    margin-bottom: 2rem;
+    background-color: #f7faf7;
+    padding: 2rem;
+}
+
+.guest_profile.confirmado {
+    /* border-color: #718c5b; */
+    /* background-color: #778b5c; */
+}
+
+.guest_profile.naoconfirmado {
+    border-color: crimson;
+    /* background-color: crimson; */
+}
+
+button.guest_save {
+    border: none;
+    background-color: transparent;
+    font-family: 'brittany signature';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #718c5b;
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.checkboxes {
+    display: flex;
+    align-self: flex-end;
+}
+
+.single-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.initial_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.initial_form > p {
+    color: #f7faf7de;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.initial_form > button {
+    margin-top: 2rem;
+}
+
+.rsvp > * > button {
+    border: none;
+    background-color: transparent;
+    font-family: 'brittany signature';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #718c5b;
+}
+
+.rsvp > * > p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.family_not_found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.family_not_found > button {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.green {
+    color: #718c5b;
+}
+
+/*Checkbox*/
+
+.toggleButton {
+    cursor: pointer;
+    display: block;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.14s ease;
+}
+.toggleButton:active {
+    transform: rotateX(30deg);
+}
+.toggleButton input {
+    display: none;
+}
+.toggleButton input + div {
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+.toggleButton input + div svg {
+    fill: none;
+    stroke-width: 3.6;
+    stroke: #bbb;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: 1;
+    stroke-dashoffset: 124.6;
+    stroke-dasharray: 0 162.6 133 29.6;
+    transition: all 0.4s ease 0s;
+}
+.toggleButton.red input + div svg {
+    stroke: crimson;
+}
+.toggleButton.green input + div svg {
+    stroke: #678C59;
+}
+.toggleButton input + div:before, .toggleButton input + div:after {
+    content: '';
+    width: 3px;
+    height: 16px;
+    background: #bbb;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+}
+.toggleButton.red input + div:before, .toggleButton.red input + div:after {
+    background: crimson;
+}
+.toggleButton.green input + div:before, .toggleButton.green input + div:after {
+    background: #678C59;
+}
+.toggleButton input + div:before {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    animation: bounceInBefore 0.3s linear forwards 0.3s;
+}
+.toggleButton input + div:after {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    animation: bounceInAfter 0.3s linear forwards 0.3s;
+}
+.toggleButton input:checked + div svg {
+    stroke-dashoffset: 162.6;
+    stroke-dasharray: 0 162.6 28 134.6;
+    transition: all 0.4s ease 0.2s;
+}
+.toggleButton input:checked + div:before {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    animation: bounceInBeforeDont 0.3s linear forwards 0s;
+}
+.toggleButton input:checked + div:after {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    animation: bounceInAfterDont 0.3s linear forwards 0s;
+}
+@keyframes bounceInBefore {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+}
+@keyframes bounceInAfter {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+@keyframes bounceInBeforeDont {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+}
+@keyframes bounceInAfterDont {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+/*Loader*/
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+.loader:after {
+    color: #718c5b;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
