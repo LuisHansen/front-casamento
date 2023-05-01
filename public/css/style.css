@@ -90,10 +90,22 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center center;
 }
 
+#fh5co-started {
+  background-image:url(../assets/img/igreja_aquarela_mobile.png);
+}
+
 @media (min-width: 800px) {
   .bg-home {
     background-image: url(../assets/img/por_do_sol_2_cortada.jpg);
   }
+  #fh5co-started {
+    background-image:url(../assets/img/igreja_aquarela.png);
+  }
+}
+
+p.bold {
+  font-weight: bold;
+  color: black;
 }
 
 figure {

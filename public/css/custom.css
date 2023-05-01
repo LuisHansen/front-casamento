@@ -93,5 +93,5 @@ input:checked ~ label > .hamburger-container > .bar3 {
 
 #rsvp-react {
     position: relative;
-    z-index: 99999;
+    z-index: 99;
 }

@@ -180,10 +180,19 @@
 		}, 1000);
 	}
 
+	const adjustWatercolorMobileOffset = () => {
+		if (window.screen.width < 800) {
+			const element = document.getElementById('fh5co-started');
+			element.setAttribute("data-stellar-horizontal-offset", 50);
+			element.setAttribute("data-stellar-vertical-offset", 0);
+		}
+	}
+
 	// Document on load.
 
 	$(function(){
 		mainMenu();
+		adjustWatercolorMobileOffset();
 		parallax();
 		offcanvas();
 		mobileMenuOutsideClick();
