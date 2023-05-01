@@ -86,8 +86,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-home {
-  background-image: url(../assets/img/por-do-sol.jpg);
+  background-image: url(../assets/img/por_do_sol_2.jpg);
   background-position: center center;
+}
+
+@media (min-width: 800px) {
+  .bg-home {
+    background-image: url(../assets/img/por_do_sol_2_cortada.jpg);
+  }
 }
 
 figure {

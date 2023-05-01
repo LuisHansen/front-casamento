@@ -1,8 +1,13 @@
 .rsvp {
     display: flex;
     justify-content: center;
-    max-width: 500px;
     margin: auto;
+    background-color: #ffffff26;
+    width: 66%;
+    min-width: 345px;
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+    padding: 2rem;
 }
 
 .guest_confirm_form {
@@ -27,9 +32,7 @@
 }
 
 .guest_list {
-    margin-bottom: 2rem;
     background-color: #f7faf7;
-    padding: 2rem;
 }
 
 .guest_profile.confirmado {
@@ -43,30 +46,14 @@
 }
 
 button.guest_save {
-    border: none;
-    background-color: transparent;
-    font-family: 'brittany signature';
-    font-size: 3rem;
-    font-weight: bold;
-    color: #718c5b;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .name {
     font-size: 2rem;
 }
 
-.checkboxes {
-    display: flex;
-    align-self: flex-end;
-}
-
-.single-checkbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 1rem;
-    font-weight: bold;
-}
 
 .initial_form {
     display: flex;
@@ -87,7 +74,7 @@ button.guest_save {
     border: none;
     background-color: transparent;
     font-family: 'brittany signature';
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #718c5b;
 }
@@ -113,150 +100,115 @@ button.guest_save {
     color: #718c5b;
 }
 
-/*Checkbox*/
+.guest_list {
+    background-color: transparent;
+}
 
-.toggleButton {
+.guest_profile {
+    color: white;
+}
+
+label.checkbox-wrapper {
+    padding: 0;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 7px;
+}
+
+.saved > h2 {
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+}
+
+/* Checkbox */
+
+.checkbox-input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.checkbox-input:checked + .checkbox-tile {
+    border-color: #699f3d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #699f3d;
+}
+.checkbox-input:checked + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #699f3d;
+    border-color: #699f3d;
+}
+.checkbox-input:checked + .checkbox-tile .checkbox-icon, .checkbox-input:checked + .checkbox-tile .checkbox-label {
+    color: #699f3d;
+}
+.checkbox-input:focus + .checkbox-tile {
+    border-color: #699f3d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+.checkbox-input:focus + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+}
+.checkbox-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 7rem;
+    border-radius: 0.5rem;
+    border: 3px solid #b5bfd9;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
     cursor: pointer;
-    display: block;
-    transform-origin: 50% 50%;
-    transform-style: preserve-3d;
-    transition: transform 0.14s ease;
-}
-.toggleButton:active {
-    transform: rotateX(30deg);
-}
-.toggleButton input {
-    display: none;
-}
-.toggleButton input + div {
-    border: 3px solid rgba(255, 255, 255, .2);
-    border-radius: 50%;
     position: relative;
-    width: 44px;
-    height: 44px;
 }
-.toggleButton input + div svg {
-    fill: none;
-    stroke-width: 3.6;
-    stroke: #bbb;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    width: 44px;
-    height: 44px;
+.checkbox-tile:before {
+    content: "";
+    position: absolute;
     display: block;
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    right: -3px;
-    bottom: -3px;
-    z-index: 1;
-    stroke-dashoffset: 124.6;
-    stroke-dasharray: 0 162.6 133 29.6;
-    transition: all 0.4s ease 0s;
-}
-.toggleButton.red input + div svg {
-    stroke: crimson;
-}
-.toggleButton.green input + div svg {
-    stroke: #678C59;
-}
-.toggleButton input + div:before, .toggleButton input + div:after {
-    content: '';
-    width: 3px;
-    height: 16px;
-    background: #bbb;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 5px;
-}
-.toggleButton.red input + div:before, .toggleButton.red input + div:after {
-    background: crimson;
-}
-.toggleButton.green input + div:before, .toggleButton.green input + div:after {
-    background: #678C59;
-}
-.toggleButton input + div:before {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.75rem;
+    left: 0.75rem;
     opacity: 0;
-    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
-    animation: bounceInBefore 0.3s linear forwards 0.3s;
+    transform: scale(0);
+    transition: 0.25s ease;
+    background-image: url(data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27192%27 height=%27192%27 fill=%27%23FFFFFF%27 viewBox=%270 0 256 256%27%3E%3Crect width=%27256%27 height=%27256%27 fill=%27none%27%3E%3C/rect%3E%3Cpolyline points=%27216 72.005 104 184 48 128.005%27 fill=%27none%27 stroke=%27%23FFFFFF%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%2732%27%3E%3C/polyline%3E%3C/svg%3E);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
-.toggleButton input + div:after {
-    opacity: 0;
-    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
-    animation: bounceInAfter 0.3s linear forwards 0.3s;
+.checkbox-tile:hover {
+    border-color: #699f3d;
 }
-.toggleButton input:checked + div svg {
-    stroke-dashoffset: 162.6;
-    stroke-dasharray: 0 162.6 28 134.6;
-    transition: all 0.4s ease 0.2s;
+.checkbox-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
 }
-.toggleButton input:checked + div:before {
-    opacity: 0;
-    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
-    animation: bounceInBeforeDont 0.3s linear forwards 0s;
+.checkbox-icon {
+    transition: 0.375s ease;
+    color: #494949;
 }
-.toggleButton input:checked + div:after {
-    opacity: 0;
-    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
-    animation: bounceInAfterDont 0.3s linear forwards 0s;
+.checkbox-icon svg {
+    width: 3rem;
+    height: 3rem;
 }
-@keyframes bounceInBefore {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
-    }
-    50% {
-        opacity: 0.9;
-        transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
-    }
-    80% {
-        opacity: 1;
-        transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translate(-50%, -50%) rotate(45deg);
-    }
+.checkbox-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
 }
-@keyframes bounceInAfter {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
-    }
-    50% {
-        opacity: 0.9;
-        transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
-    }
-    80% {
-        opacity: 1;
-        transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
-    }
-}
-@keyframes bounceInBeforeDont {
-    0% {
-        opacity: 1;
-        transform: scale(1) translate(-50%, -50%) rotate(45deg);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
-    }
-}
-@keyframes bounceInAfterDont {
-    0% {
-        opacity: 1;
-        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
-    }
-}
+
+
 
 /*Loader*/
 

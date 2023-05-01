@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { rsvpApi } from './API/RSVPApi';
 import type { Familia, Convidado } from './API/RSVPApi';
 
-import { ReactComponent as Checkmark } from './checkmark.svg';
 import './styles/rsvp.css';
 
 enum RsvpState {
@@ -76,47 +75,25 @@ export const RSVP: React.FC = () => {
                 <div className="initial_form">
                     <p>Qual o código da família?</p>
                     <input type="text" value={codFamilia} onChange={e => setCodFamilia(e.target.value)}/>
-                    <button onClick={buscarFamilia}>OK</button>
+                    <button onClick={buscarFamilia}>Buscar</button>
                 </div>
             )}
             {state === RsvpState.ConfirmingGuests && (
                 <div className="guest_confirm_form">
+                    <p>Selecione os convidados que comparecerão:</p>
                     <div className="guest_list">
                         {familia.convidados.map(convidado => (
                             <div
-                                className={`guest_profile ${convidado.confirmado ? 'confirmado' : 'naoconfirmado'}`}
+                                className="checkbox"
                                 key={convidado._id}
                                 onClick={(e) => onClickConvidado(convidado, e)}
                             >
-                                <div className="name">{convidado.nome}</div>
-                                <div className="checkboxes">
-                                    <div className="single-checkbox">
-                                        <label className={`toggleButton ${convidado.confirmado ? '' : 'red'}`} htmlFor={`red_convidado_${convidado._id}`}>
-                                            <input
-                                                id={`convidado_${convidado._id}`}
-                                                type="checkbox"
-                                                checked={false}
-                                            />
-                                            <div>
-                                                <Checkmark />
-                                            </div>
-                                        </label>
-                                        <p className={convidado.confirmado ? '' : 'red'}>Não</p>
-                                    </div>
-                                    <div className="single-checkbox">
-                                        <label className={`toggleButton ${convidado.confirmado ? 'green' : ''}`} htmlFor={`green_convidado_${convidado._id}`}>
-                                            <input
-                                                id={`convidado_${convidado._id}`}
-                                                type="checkbox"
-                                                checked
-                                            />
-                                            <div>
-                                                <Checkmark />
-                                            </div>
-                                        </label>
-                                        <p className={convidado.confirmado ? 'green' : ''}>Sim</p>
-                                    </div>
-                                </div>
+                                <label className="checkbox-wrapper">
+                                    <input type="checkbox" className="checkbox-input" checked={convidado.confirmado} onChange={() => false}/>
+                                    <span className="checkbox-tile">
+                                        <span className="checkbox-label">{convidado.nome}</span>
+                                    </span>
+                                </label>
                             </div>
                         ))}
                     </div>
