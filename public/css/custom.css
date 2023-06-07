@@ -81,10 +81,10 @@ input:checked ~ label > .hamburger-container > .bar3 {
     flex-direction: column;
     padding: 5px 2rem;
     margin: 2rem;
-    border: 7px double #718c5b;
+    border: 7px double #005945;
     border-radius: 2rem;
     background-color: white;
-    color: #718c5b !important;
+    color: #005945 !important;
 }
 
 #dias, #horas, #minutos {
