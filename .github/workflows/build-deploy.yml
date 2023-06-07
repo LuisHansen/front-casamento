@@ -47,6 +47,9 @@ jobs:
       - name: Build
         run: |
           npm run build
+        env:
+          REACT_APP_API_BASEURL: ${{ env.REACT_APP_API_BASEURL }}
+          REACT_APP_API_KEY: ${{ env.REACT_APP_API_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
