@@ -13,7 +13,8 @@
 *
 * ======================================================= */
 :root {
-  --main-color: #688C59;
+  --main-color: #005945;
+  /*--main-color: #688C59;*/
 }
 body {
   font-family: "Open Sans", Arial, sans-serif;

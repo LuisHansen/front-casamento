@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { RSVP_BASE_URL } from '../conf';
+import { RSVP_BASE_URL, RSVP_API_KEY } from '../conf';
 
 export type Convidado = {
     _id: any;
@@ -35,11 +35,15 @@ class RSVPApi {
     baseUrl = RSVP_BASE_URL;
 
     async getRsvp(familyId: string): Promise<IGetRsvpResponse> {
-        const url = `${this.baseUrl}/rsvp/${familyId}`;
+        const url = `${this.baseUrl}/get_familia?code=${RSVP_API_KEY}`;
         try {
-            const response = await axios.get(url);
+            const response = await axios.get(url, {
+                params: {
+                    id: familyId,
+                }
+            });
             const familia: Familia = response.data[0];
-            console.log('familia', familia);
+            console.log('familia', familia, response.data);
             return {
                 familia,
             };
@@ -53,9 +57,13 @@ class RSVPApi {
     }
 
     async postRsvp(familyId: string, data: IRsvpPostData): Promise<IRsvpPostResponse> {
-        const url = `${this.baseUrl}/rsvp/${familyId}`;
+        const url = `${this.baseUrl}/rsvp?code=${RSVP_API_KEY}`;
         try {
-            await axios.post(url, data);
+            await axios.post(url, data, {
+                params: {
+                    id: familyId,
+                }
+            });
             return {
                 status: 200,
             };
