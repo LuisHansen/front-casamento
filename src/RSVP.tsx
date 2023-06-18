@@ -56,7 +56,7 @@ export const RSVP: React.FC = () => {
 
     const buscarFamilia = async () => {
         setState(RsvpState.Loading);
-        const resposta = await rsvpApi.getRsvp(codFamilia);
+        const resposta = await rsvpApi.getRsvp(codFamilia.toUpperCase());
         if (resposta.error) {
             setState(RsvpState.Error);
             return;

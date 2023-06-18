@@ -81,10 +81,10 @@ input:checked ~ label > .hamburger-container > .bar3 {
     flex-direction: column;
     padding: 5px 2rem;
     margin: 2rem;
-    border: 7px double #005945;
+    border: 7px double #97A75C;
     border-radius: 2rem;
     background-color: white;
-    color: #005945 !important;
+    color: #97A75C !important;
 }
 
 #dias, #horas, #minutos {
@@ -94,4 +94,48 @@ input:checked ~ label > .hamburger-container > .bar3 {
 #rsvp-react {
     position: relative;
     z-index: 99;
+}
+
+.lista-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: auto;
+    align-content: start;
+    justify-content: center;
+}
+
+.item-presente {
+    flex: 0 0 auto;
+    margin: 1rem;
+    padding: 3rem;
+    background: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item-presente:hover {
+    transform: scale(1.05);
+}
+
+.item-presente > .desc {
+    max-width: 200px;
+}
+
+.item-presente-imagem > img {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.item-presente-imagem {
+    width: 200px;
+    height: 220px;
+    align-items: center;
+    display: flex;
+}
+
+p.preco {
+    color: green;
+    font-size: x-large;
 }
