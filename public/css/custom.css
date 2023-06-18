@@ -1,9 +1,12 @@
+.profile-pic {
+    width: 200px;
+}
 .collapsible-menu {
     float: right;
     position: absolute;
     z-index: 9999;
 }
-@media (min-width: 980px)  {
+@media (min-width: 980px) {
     .collapsible-menu {
         display: none;
     }
