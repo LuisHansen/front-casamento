@@ -1,4 +1,4 @@
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="br"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,14 +57,183 @@
     <link rel="stylesheet" href="css/custom.css">
 
 
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+    <script>
+        const presentes = {
+            'presente-lembrancinha': {
+                titulo: 'Lembrancinha',
+                imagem: 'assets/img/presentes/lembrancinha.png',
+                descricao: 'Um pequeno agrado que nos deixa muito felizes!',
+                preco: 'R$ 100,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/TicxNeau0N',
+                cartao_link: '',
+            },
+            'presente-cueca': {
+                titulo: 'Cueca do Palmeiras',
+                imagem: 'assets/img/presentes/cueca.jpg',
+                descricao: 'Cueca do Palmeiras para o noivo arrasar na noite de núpcias',
+                preco: 'R$ 70,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/Wt6m2p5zkF',
+                cartao_link: '',
+            },
+            'presente-rivotril': {
+                titulo: 'Ansiolítico da Bia',
+                imagem: 'assets/img/presentes/ansiolitico.jpg',
+                descricao: 'Mata-leão para a noiva ficar mais calma',
+                preco: 'R$ 150,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/WGGYiFzQof',
+                cartao_link: '',
+            },
+            'presente-taxi': {
+                titulo: 'Táxi Interlagos - Guarulhos',
+                imagem: 'assets/img/presentes/taxi.jpg',
+                descricao: 'Táxi para nos levar até a lua de mel',
+                preco: 'R$ 200,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/2frEgEod80',
+                cartao_link: 'https://link.stone.com.br/t/chk_94ZJ87Vhx8Fj32mW',
+            },
+            'presente-spa': {
+                titulo: 'Spa em Cancún',
+                imagem: 'assets/img/presentes/spa.jpg',
+                descricao: 'Depois dessa organização toda, vamos precisar relaxar!',
+                preco: 'R$ 400,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/ybW0PbcAG4',
+                cartao_link: 'https://link.stone.com.br/t/chk_OQ23AVU7lumEY9zR',
+            },
+            'presente-condominio': {
+                titulo: '1 mês do condomínio',
+                imagem: 'assets/img/presentes/condominio.jpg',
+                descricao: 'Os boletos não param (a não ser que você ajude)',
+                preco: 'R$ 700,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/pnyBhE3KZM',
+                cartao_link: 'https://link.stone.com.br/t/chk_VB1Q8NzHmfBM8GEO',
+            },
+            'presente-carreto': {
+                titulo: 'Carreto',
+                imagem: 'assets/img/presentes/carreto.jpg',
+                descricao: 'Ajudando a contratar um carreto de mudança',
+                preco: 'R$ 500,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/y8ja3LjrLU',
+                cartao_link: 'https://link.stone.com.br/t/chk_go8eKLbS2hYYQpkM',
+            },
+            'presente-aposentadoria': {
+                titulo: 'Previdência privada',
+                imagem: 'assets/img/presentes/aposentadoria.jpg',
+                descricao: 'Ajuda para a aposentadoria dos noivos',
+                preco: 'R$ 800,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/qFkZemvt0e',
+                cartao_link: 'https://link.stone.com.br/t/chk_M4yz2Oqf4KhABwlO',
+            },
+            'presente-calcinha': {
+                titulo: 'Lingerie chique para noiva',
+                imagem: 'assets/img/presentes/calcinha.jpg',
+                descricao: 'Para a noiva arrasar na lua de mel',
+                preco: 'R$ 300,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/4Nz8AWJBRl',
+                cartao_link: 'https://link.stone.com.br/t/chk_kJQApgvf5FMD4vKO',
+            },
+            'presente-culinaria': {
+                titulo: 'Curso de culinária',
+                imagem: 'assets/img/presentes/remi.jpg',
+                descricao: 'Ajude os noivos a não comerem delivery todos os dias',
+                preco: 'R$ 1000,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/RbOQtQXpjX',
+                cartao_link: 'https://link.stone.com.br/t/chk_5p3lPo3C02CN49o6',
+            },
+            'presente-cartoes': {
+                titulo: 'Ajuda nas contas',
+                imagem: 'assets/img/presentes/cartoes.jpg',
+                descricao: 'Depois dessa festa, vamos precisar haha!',
+                preco: 'R$ 200,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/a0ZsuFBgEH',
+                cartao_link: 'https://link.stone.com.br/t/chk_m1M4V1E4IEUwVYqx',
+            },
+            'presente-passeio': {
+                titulo: 'Passeio Chichén Itzá',
+                imagem: 'assets/img/presentes/passeio.jpg',
+                descricao: 'Vamos ao México, ajude no nosso passeio!',
+                preco: 'R$ 700,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/Sm1ELiuozR',
+                cartao_link: 'https://link.stone.com.br/t/chk_OJldJRpSnKhEdaQ0',
+            },
+            'presente-all-inclusive': {
+                titulo: 'Diária all-inclusive',
+                imagem: 'assets/img/presentes/cancun.jpg',
+                descricao: 'Diária no All Inclusive em Cancun',
+                preco: 'R$ 1500,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/EIQDoMOjVg',
+                cartao_link: 'https://link.stone.com.br/t/chk_7o3zXgBbiVTmjgBv',
+            },
+            'presente-drinks': {
+                titulo: 'Drinks',
+                imagem: 'assets/img/presentes/drinks.jpg',
+                descricao: '1 semana de drinks a beira mar',
+                preco: 'R$ 500,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/6d9zAEjiOR',
+                cartao_link: 'https://link.stone.com.br/t/chk_8AXkWNZsg9iZG5KN',
+            },
+            'presente-comprinhas': {
+                titulo: 'Comprinhas no aeroporto',
+                imagem: 'assets/img/presentes/aeroporto.jpg',
+                descricao: 'Para comprarmos lembrancinhas para a família',
+                preco: 'R$ 300,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/eXO0HTSkhr',
+                cartao_link: 'https://link.stone.com.br/t/chk_4k1jAvBfQUdA65ay',
+            },
+            'presente-faxina': {
+                titulo: 'De volta a realidade',
+                imagem: 'assets/img/presentes/faxina.png',
+                descricao: 'Ajuda de custo na faxina da obra',
+                preco: 'R$ 250,00',
+                pix_link: 'https://nubank.com.br/pagar/2il2d/Dq6lqJ95EE',
+                cartao_link: 'https://link.stone.com.br/t/chk_VG091zklfbTGJnzj',
+            },
+        };
 
+        const abrirDetalhes = id_presente => {
+            const titulo_modal = document.querySelector('#modal-title');
+            titulo_modal.innerHTML = presentes[id_presente].titulo;
 
+            const imagem_modal = document.querySelector('#modal-image');
+            imagem_modal.setAttribute('src', presentes[id_presente].imagem);
+
+            const descricao_modal = document.querySelector('#modal-descrição');
+            descricao_modal.innerHTML = presentes[id_presente].descricao;
+
+            const preco_modal = document.querySelector('#modal-preco');
+            preco_modal.innerHTML = presentes[id_presente].preco;
+
+            const pix = document.querySelector('#link-pix');
+            pix.setAttribute('href', presentes[id_presente].pix_link);
+
+            const cartao = document.querySelector('#link-cartao');
+            if (presentes[id_presente].cartao_link) {
+                cartao.setAttribute('href', presentes[id_presente].cartao_link);
+                cartao.classList.remove('hidden');
+                cartao.setAttribute('aria-hidden', 'false');
+                cartao.setAttribute('hidden', 'false');
+            } else {
+                cartao.classList.add('hidden');
+                cartao.setAttribute('aria-hidden', 'true');
+                cartao.setAttribute('hidden', 'true');
+            }
+        };
+
+        window.onload = () => {
+           const divPresentes = document.querySelectorAll('.item-presente');
+           console.log('itens', divPresentes);
+           divPresentes.forEach(el => {
+               el.addEventListener('click', e => {
+                   // e.stopPropagation();
+                   // console.log('Clicado em ', e.currentTarget.id);
+                   abrirDetalhes(e.currentTarget.id);
+               });
+           });
+        };
+    </script>
+
+</head>
+
+<body>
     <header id="fh5co-header-section" class="sticky-banner">
         <div class="container">
             <div class="nav-header">
@@ -104,6 +273,44 @@
 
     <!-- end:header-top -->
 
+    <!-- Hidden modal -->
+    <div class="modal fade" id="item-presente-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Detalhes do presente</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 ml-auto">
+                                <img src="" id="modal-image" alt="Imagem do presente">
+                            </div>
+                            <div class="col-md-6 ml-auto">
+                                <p id="modal-title"></p>
+                                <p id="modal-descrição"></p>
+                                <div class="pagamentos">
+                                    <p class="preco" id="modal-preco"></p>
+                                    <h2>Opções de pagamento</h2>
+                                </div>
+                                <div class="opcoes-pagamento">
+                                    <a class="btn btn-primary btn-sm" target="_blank" id="link-pix">Pix</a>
+                                    <a class="btn btn-primary btn-sm" target="_blank" id="link-cartao">Cartão</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+<!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="fh5co-when-where" class="fh5co-section-gray">
         <div class="container">
@@ -119,8 +326,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-md-offset-0 text-center animate-box">
+                    <h3>Presentinhos e lembrancinhas</h3>
                     <div class="lista-container">
-                        <div class="item-presente" id="presente-lembrancinha">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-lembrancinha">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/lembrancinha.png" alt="lembrancinha">
                             </div>
@@ -130,7 +338,7 @@
                                 <p class="preco">R$ 100,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-cueca">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-cueca">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/cueca.jpg" alt="cueca do palmeiras">
                             </div>
@@ -140,7 +348,7 @@
                                 <p class="preco">R$ 70,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-rivotril">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-rivotril">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/ansiolitico.jpg" alt="ansiolítico">
                             </div>
@@ -150,77 +358,17 @@
                                 <p class="preco">R$ 150,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-taxi">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-taxi">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/taxi.jpg" alt="taxi">
                             </div>
                             <div class="desc">
-                                <h3>Taxi Interlagos - Guarulhos</h3>
-                                <p>Taxi para nos levar até a lua de mel</p>
+                                <h3>Táxi Interlagos - Guarulhos</h3>
+                                <p>Táxi para nos levar até a lua de mel</p>
                                 <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-spa">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/spa.jpg" alt="spa em Cancún">
-                            </div>
-                            <div class="desc">
-                                <h3>Spa em Cancún</h3>
-                                <p>Depois dessa organização toda, vamos precisar relaxar!</p>
-                                <p class="preco">R$ 400,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-condominio">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/condominio.jpg" alt="contas a pagar">
-                            </div>
-                            <div class="desc">
-                                <h3>1 mês do condomínio</h3>
-                                <p>Os boletos não param (a não ser que você ajude)</p>
-                                <p class="preco">R$ 700,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-carreto">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/carreto.jpg" alt="carreto">
-                            </div>
-                            <div class="desc">
-                                <h3>Carreto</h3>
-                                <p>Ajudando a contratar um carreto de mudança</p>
-                                <p class="preco">R$ 500,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-aposentadoria">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/aposentadoria.jpg" alt="aposentados">
-                            </div>
-                            <div class="desc">
-                                <h3>Previdência privada</h3>
-                                <p>Ajuda para a aposentadoria dos noivos</p>
-                                <p class="preco">R$ 800,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-calcinha">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/calcinha.jpg" alt="lingerie">
-                            </div>
-                            <div class="desc">
-                                <h3>Lingerie chique para noiva</h3>
-                                <p>Para a noiva arrasar na lua de mel</p>
-                                <p class="preco">R$ 300,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-culinaria">
-                            <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/remi.jpg" alt="remi">
-                            </div>
-                            <div class="desc">
-                                <h3>Curso de culinária</h3>
-                                <p>Ajude os noivos a não comerem delivery todos os dias</p>
-                                <p class="preco">R$ 1000,00</p>
-                            </div>
-                        </div>
-                        <div class="item-presente" id="presente-cartoes">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-cartoes">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/cartoes.jpg" alt="cartões">
                             </div>
@@ -230,27 +378,32 @@
                                 <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-passeio">
+                    </div>
+                </div>
+                <div class="col-md-12 col-md-offset-0 text-center animate-box">
+                    <h2 class="presentoes-titulo">Presentões grandões</h2>
+                    <div class="lista-container">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-spa">
                             <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/passeio.jpg" alt="passeio">
+                                <img src="assets/img/presentes/spa.jpg" alt="spa em Cancún">
                             </div>
                             <div class="desc">
-                                <h3>Passeio Chichén Itzá</h3>
-                                <p>Vamos ao México, ajude no nosso passeio!</p>
-                                <p class="preco">R$ 700,00</p>
+                                <h3>Spa em Cancún</h3>
+                                <p>Depois dessa organização toda, vamos precisar relaxar!</p>
+                                <p class="preco">R$ 400,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-all-inclusive">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-carreto">
                             <div class="item-presente-imagem">
-                                <img src="assets/img/presentes/cancun.jpg" alt="all-inclusive">
+                                <img src="assets/img/presentes/carreto.jpg" alt="carreto">
                             </div>
                             <div class="desc">
-                                <h3>Diária all-inclusive</h3>
-                                <p>Diária no All Inclusive em Cancun</p>
-                                <p class="preco">R$ 1500,00</p>
+                                <h3>Carreto</h3>
+                                <p>Ajudando a contratar um carreto de mudança</p>
+                                <p class="preco">R$ 500,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-drinks">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-drinks">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/drinks.jpg" alt="drinks">
                             </div>
@@ -260,7 +413,7 @@
                                 <p class="preco">R$ 500,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-comprinhas">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-comprinhas">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/aeroporto.jpg" alt="comprinhas no aeroporto">
                             </div>
@@ -270,7 +423,7 @@
                                 <p class="preco">R$ 300,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" id="presente-faxina">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-faxina">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/faxina.png" alt="faxina">
                             </div>
@@ -278,6 +431,71 @@
                                 <h3>De volta a realidade</h3>
                                 <p>Ajuda de custo na faxina da obra</p>
                                 <p class="preco">R$ 250,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-md-offset-0 text-center animate-box">
+                    <h1 class="presentoes-titulo">Presentões absurdos</h1>
+                    <div class="lista-container">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-condominio">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/condominio.jpg" alt="contas a pagar">
+                            </div>
+                            <div class="desc">
+                                <h3>1 mês do condomínio</h3>
+                                <p>Os boletos não param (a não ser que você ajude)</p>
+                                <p class="preco">R$ 700,00</p>
+                            </div>
+                        </div>
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-aposentadoria">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/aposentadoria.jpg" alt="aposentados">
+                            </div>
+                            <div class="desc">
+                                <h3>Previdência privada</h3>
+                                <p>Ajuda para a aposentadoria dos noivos</p>
+                                <p class="preco">R$ 800,00</p>
+                            </div>
+                        </div>
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-calcinha">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/calcinha.jpg" alt="lingerie">
+                            </div>
+                            <div class="desc">
+                                <h3>Lingerie chique para noiva</h3>
+                                <p>Para a noiva arrasar na lua de mel</p>
+                                <p class="preco">R$ 300,00</p>
+                            </div>
+                        </div>
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-culinaria">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/remi.jpg" alt="remi">
+                            </div>
+                            <div class="desc">
+                                <h3>Curso de culinária</h3>
+                                <p>Ajude os noivos a não comerem delivery todos os dias</p>
+                                <p class="preco">R$ 1000,00</p>
+                            </div>
+                        </div>
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-passeio">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/passeio.jpg" alt="passeio">
+                            </div>
+                            <div class="desc">
+                                <h3>Passeio Chichén Itzá</h3>
+                                <p>Vamos ao México, ajude no nosso passeio!</p>
+                                <p class="preco">R$ 700,00</p>
+                            </div>
+                        </div>
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-all-inclusive">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/cancun.jpg" alt="all-inclusive">
+                            </div>
+                            <div class="desc">
+                                <h3>Diária all-inclusive</h3>
+                                <p>Diária no All Inclusive em Cancun</p>
+                                <p class="preco">R$ 1500,00</p>
                             </div>
                         </div>
                     </div>
@@ -301,27 +519,18 @@
         </div>
     </footer>
 
-
-
-    </div>
-    <!-- END fh5co-page -->
-
-    </div>
-    <!-- END fh5co-wrapper -->
-
     <!-- jQuery -->
     <script src="dist/bootstrap.min.js"></script>
-    <script src="dist/google_map.js"></script>
     <script src="dist/hoverIntent.js"></script>
     <script src="dist/jquery.easing.1.3.js"></script>
     <script src="dist/jquery.magnific-popup.min.js"></script>
     <script src="dist/jquery.min.js"></script>
     <script src="dist/jquery.stellar.min.js"></script>
     <script src="dist/magnific-popup-options.js"></script>
-    <script src="dist/main.js"></script>
+<!--    <script src="dist/main.js"></script>-->
     <script src="dist/respond.min.js"></script>
     <script src="dist/scripts.js"></script>
     <script src="dist/sticky.js"></script>
     <script src="dist/superfish.js"></script>
-    </body>
+</body>
 </html>
