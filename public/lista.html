@@ -63,15 +63,15 @@
                 titulo: 'Lembrancinha',
                 imagem: 'assets/img/presentes/lembrancinha.png',
                 descricao: 'Um pequeno agrado que nos deixa muito felizes!',
-                preco: 'R$ 100,00',
+                preco: 'R$ 200,00',
                 pix_link: 'https://nubank.com.br/pagar/2il2d/TicxNeau0N',
                 cartao_link: '',
             },
-            'presente-cueca': {
+            'presente-cuecas': {
                 titulo: 'Cueca do Palmeiras',
                 imagem: 'assets/img/presentes/cueca.jpg',
                 descricao: 'Cueca do Palmeiras para o noivo arrasar na noite de núpcias',
-                preco: 'R$ 70,00',
+                preco: 'R$ 200,00',
                 pix_link: 'https://nubank.com.br/pagar/2il2d/Wt6m2p5zkF',
                 cartao_link: '',
             },
@@ -79,7 +79,7 @@
                 titulo: 'Ansiolítico da Bia',
                 imagem: 'assets/img/presentes/ansiolitico.jpg',
                 descricao: 'Mata-leão para a noiva ficar mais calma',
-                preco: 'R$ 150,00',
+                preco: 'R$ 200,00',
                 pix_link: 'https://nubank.com.br/pagar/2il2d/WGGYiFzQof',
                 cartao_link: '',
             },
@@ -322,7 +322,7 @@
 
     <div id="fh5co-when-where" class="fh5co-section-gray">
         <div class="container">
-            <div class="row row-bottom-padded-md">
+            <div class="row row-bottom-padded-sm">
                 <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                     <h2>Lista de presentes</h2>
                 </div>
@@ -332,10 +332,19 @@
                         Não existe presente grande ou pequeno, nossa felicidade é sua presença e sua bênção em nosso casamento! Agradecemos imensamente!</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-bottom-padded-md">
                 <div class="col-md-12 col-md-offset-0 text-center animate-box">
-                    <h3>Presentinhos e lembrancinhas</h3>
                     <div class="lista-container">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-surpresa">
+                            <div class="item-presente-imagem">
+                                <img src="assets/img/presentes/surpresa.jpeg" alt="surpresa">
+                            </div>
+                            <div class="desc">
+                                <h3>Presente Surpresa!</h3>
+                                <p>Você decide que valor quer dar de presente! E ainda pode pagar com cartão de crédito, olha que chique!</p>
+                                <p class="preco">R$ ????</p>
+                            </div>
+                        </div>
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-lembrancinha">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/lembrancinha.png" alt="lembrancinha">
@@ -343,7 +352,7 @@
                             <div class="desc">
                                 <h3>Lembrancinha</h3>
                                 <p>Um pequeno agrado que nos deixa muito felizes!</p>
-                                <p class="preco">R$ 100,00</p>
+                                <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-cueca">
@@ -351,9 +360,9 @@
                                 <img src="assets/img/presentes/cueca.jpg" alt="cueca do palmeiras">
                             </div>
                             <div class="desc">
-                                <h3>Cueca do Palmeiras</h3>
+                                <h3>Cuecas do Palmeiras</h3>
                                 <p>Cueca do Palmeiras para o noivo arrasar na noite de núpcias</p>
-                                <p class="preco">R$ 70,00</p>
+                                <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-rivotril">
@@ -363,7 +372,7 @@
                             <div class="desc">
                                 <h3>Ansiolítico da Bia</h3>
                                 <p>Mata-leão para a noiva ficar mais calma</p>
-                                <p class="preco">R$ 150,00</p>
+                                <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-taxi">
@@ -386,11 +395,6 @@
                                 <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-md-offset-0 text-center animate-box">
-                    <h2 class="presentoes-titulo">Presentões grandões</h2>
-                    <div class="lista-container">
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-spa">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/spa.jpg" alt="spa em Cancún">
@@ -441,11 +445,6 @@
                                 <p class="preco">R$ 250,00</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-md-offset-0 text-center animate-box">
-                    <h1 class="presentoes-titulo">Presentões absurdos</h1>
-                    <div class="lista-container">
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-condominio">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/condominio.jpg" alt="contas a pagar">
@@ -507,6 +506,21 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <h3>Outras opções</h3>
+                </div>
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <p>
+                        Caso queira nos presentear com algo diferente da lista acima, nós também fizemos nossa lista de casamento nas Casas Bahia!
+                    </p>
+                    <a class="btn btn-primary btn-sm btn-justify" target="_blank">Clique aqui para acessar a lista de presentes no site das Casas Bahia!</a>
+                    <p>
+                        Ou, se preferir, aqui está o nosso código PIX, para presentes de todos os tamanhos!
+                    </p>
+                    <img src="assets/img/pix.png" alt="código pix" id="cod-pix"/>
                 </div>
             </div>
         </div>
