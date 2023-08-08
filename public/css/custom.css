@@ -222,5 +222,11 @@ p.preco {
 img#cod-pix {
     height: 200px;
     border: 3px solid #688c59;
+    margin-bottom: 1rem;
 }
 
+@media (max-width: 700px) {
+    img#cod-pix {
+        display: none;
+    }
+}

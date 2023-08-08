@@ -56,7 +56,8 @@ export const RSVP: React.FC = () => {
 
     const buscarFamilia = async () => {
         setState(RsvpState.Loading);
-        const resposta = await rsvpApi.getRsvp(codFamilia.toUpperCase());
+        const codigoSanitizado = codFamilia.normalize("NFD").replace(/\p{Diacritic}/gu, "").toUpperCase();
+        const resposta = await rsvpApi.getRsvp(codigoSanitizado);
         if (resposta.error) {
             setState(RsvpState.Error);
             return;
@@ -73,7 +74,7 @@ export const RSVP: React.FC = () => {
         <div className="rsvp">
             {state === RsvpState.Initial && (
                 <div className="initial_form">
-                    <p>Qual o código da família?</p>
+                    <p>Digite o nome da família exatamente como está no verso do convite</p>
                     <input type="text" value={codFamilia} onChange={e => setCodFamilia(e.target.value)}/>
                     <button onClick={buscarFamilia}>Buscar</button>
                 </div>
@@ -105,7 +106,7 @@ export const RSVP: React.FC = () => {
             )}
             {state === RsvpState.NotFound && (
                 <div className="family_not_found">
-                    <p>Humm, não encontramos sua família com esse código!</p>
+                    <p>Humm, não encontramos sua família com esse nome!</p>
                     <p>Pode conferir se digitou certinho?</p>
                     <p>Se não funcionar, por favor entre em contato com o Luís em (11) 94123-7636!</p>
                     <button onClick={resetState}>Tentar de novo</button>
@@ -123,7 +124,7 @@ export const RSVP: React.FC = () => {
                 <div className="saved">
                     <h2>Tudo certo!</h2>
                     <p>Suas informações foram salvas!</p>
-                    <p>Se quiser, pode editar depois! É só voltar aqui e digitar o mesmo código!</p>
+                    <p>Se quiser, pode editar depois! É só voltar aqui e digitar o mesmo nome de família!</p>
                 </div>
             )}
         </div>

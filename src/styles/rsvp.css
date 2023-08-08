@@ -201,6 +201,8 @@ label.checkbox-wrapper {
     color: #707070;
     transition: 0.375s ease;
     text-align: center;
+    width: 70%;
+    padding-left: 25px;
 }
 
 
