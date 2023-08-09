@@ -56,7 +56,7 @@ export const RSVP: React.FC = () => {
 
     const buscarFamilia = async () => {
         setState(RsvpState.Loading);
-        const codigoSanitizado = codFamilia.normalize("NFD").replace(/\p{Diacritic}/gu, "").toUpperCase();
+        const codigoSanitizado = codFamilia.normalize("NFD").replace(/\p{Diacritic}|,/gu, "").toUpperCase();
         const resposta = await rsvpApi.getRsvp(codigoSanitizado);
         if (resposta.error) {
             setState(RsvpState.Error);
@@ -74,7 +74,8 @@ export const RSVP: React.FC = () => {
         <div className="rsvp">
             {state === RsvpState.Initial && (
                 <div className="initial_form">
-                    <p>Digite o nome da família exatamente como está no verso do convite</p>
+                    <p>Digite o nome da família exatamente</p>
+                    <p>como está no verso do convite</p>
                     <input type="text" value={codFamilia} onChange={e => setCodFamilia(e.target.value)}/>
                     <button onClick={buscarFamilia}>Buscar</button>
                 </div>

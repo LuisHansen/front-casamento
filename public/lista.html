@@ -249,6 +249,16 @@
 
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5WZ2RERJN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H5WZ2RERJN');
+</script>
+
 <body>
     <header id="fh5co-header-section" class="sticky-banner">
         <div class="container">
@@ -265,22 +275,21 @@
                     </label>
                     <div class="menu-content">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Confirme sua presença</a></li>
-                            <li><a href="#">Quando & Onde</a></li>
-                            <li><a href="#">Lista de Presentes</a></li>
-                            <li><a href="#">Galeria</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="lista.html">Lista de Presentes</a></li>
+                            <li><a href="/#rsvp">Confirme sua presença (<b>RSVP</b>)</a></li>
+                            <li><a href="when-where.html">Quando & Onde</a></li>
+                            <li><a href="gallery.html">O Casal</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav id="fh5co-menu-wrap" role="navigation">
                     <ul class="sf-menu sf-js-enabled sf-arrows" id="fh5co-primary-menu" style="touch-action: pan-y;">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Confirme sua presença</a></li>
-                        <li><a href="when-where.html">Quando &amp; Onde</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="active"><a href="lista.html">Lista de Presentes</a></li>
-                        <li><a href="gallery.html">Galeria</a></li>
-
+                        <li><a href="/#rsvp">Confirme sua presença (<b>RSVP</b>)</a></li>
+                        <li><a href="when-where.html">Quando &amp; Onde</a></li>
+                        <li><a href="gallery.html">O Casal</a></li>
                     </ul>
                 </nav>
             </div>
@@ -337,21 +346,8 @@
                 <div class="col-md-10 col-md-offset-1 text-center animate-box">
                     <p>Oba! Você quer nos ajudar a mobiliar nosso apartamento novo? Ou talvez ajudar a pagar nossa festa?
                         Não existe presente grande ou pequeno, nossa felicidade é sua presença e sua bênção em nosso casamento! Agradecemos imensamente!</p>
-                </div>
-            </div>
-            <div class="row row-bottom-padded-sm">
-                <div class="col-md-8 col-md-offset-2 text-center animate-box">
-                    <h3>Presentes personalizados</h3>
-                </div>
-                <div class="col-md-8 col-md-offset-2 text-center animate-box">
-                    <p>Caso queira nos presentear com algo diferente da lista abaixo, nós também fizemos nossa lista de casamento em algumas lojas!
-                    Use os botões abaixo para acessar as listas de presente:</p>
                     <p>
-                        <a class="btn btn-primary btn-sm" target="_blank" href="https://listas.casasbahia.com.br/beatrizeluis07102023">Casas Bahia</a>
-                        <a class="btn btn-primary btn-sm" target="_blank" href="https://www.finalfeliz.de/Bialu">Magazine Luiza</a>
-                    </p>
-                    <p>
-                        Ou, se preferir, aqui está o nosso código PIX, para presentes de todos os tamanhos!
+                        Temos uma lista com presentes abaixo, mas se preferir, aqui está o nosso código PIX, para presentes de todos os tamanhos:
                     </p>
                     <img src="assets/img/pix.png" alt="código pix" id="cod-pix"/>
                     <p id="pix-copiar">
@@ -359,7 +355,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-bottom-padded-md">
                 <div class="col-md-12 col-md-offset-0 text-center animate-box">
                     <div class="lista-container">
                         <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-surpresa">
@@ -382,7 +378,7 @@
                                 <p class="preco">R$ 200,00</p>
                             </div>
                         </div>
-                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-cueca">
+                        <div class="item-presente" data-toggle="modal" data-target="#item-presente-modal" id="presente-cuecas">
                             <div class="item-presente-imagem">
                                 <img src="assets/img/presentes/cueca.jpg" alt="cueca do palmeiras">
                             </div>
@@ -543,6 +539,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <h3>Presentes personalizados</h3>
+                </div>
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <p>Caso queira nos presentear com algo diferente da lista acima, nós também fizemos nossa lista de casamento em algumas lojas!
+                        Use os botões abaixo para acessar as listas de presente:</p>
+                    <p>
+                        <a class="btn btn-primary btn-sm" target="_blank" href="https://listas.casasbahia.com.br/beatrizeluis07102023">Casas Bahia</a>
+                        <a class="btn btn-primary btn-sm" target="_blank" href="https://www.finalfeliz.de/Bialu">Magazine Luiza</a>
+                    </p>
                 </div>
             </div>
         </div>

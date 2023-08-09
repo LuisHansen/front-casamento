@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-home {
-  background-image: url(../assets/img/por_do_sol_2.jpg);
+  background-image: url(https://live.staticflickr.com/65535/53103682271_e352c3eceb_b.jpg);
   background-position: center center;
 }
 
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 800px) {
   .bg-home {
-    background-image: url(../assets/img/por_do_sol_2_cortada.jpg);
+    background-image: url(https://live.staticflickr.com/65535/53103116522_2df3232a5c_h.jpg);
   }
   #fh5co-started {
     background-image:url(../assets/img/igreja_aquarela.png);
