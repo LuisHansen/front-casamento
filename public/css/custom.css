@@ -230,3 +230,7 @@ img#cod-pix {
         display: none;
     }
 }
+
+.mfp-img {
+    max-height: 100vh !important;
+}
