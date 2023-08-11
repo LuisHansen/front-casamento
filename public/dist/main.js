@@ -140,7 +140,7 @@
 
 	const countdown = () => {
 		// Definir a data-alvo (07/10/2023 às 17h00)
-		var countDownDate = new Date("2023-10-07T17:00:00.925Z").getTime();
+		var countDownDate = new Date("2023-10-07T20:30:00.000Z").getTime();
 
 		// Atualiza a contagem regressiva a cada 1 segundo
 		var x = setInterval(function() {
