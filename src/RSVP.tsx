@@ -77,7 +77,7 @@ export const RSVP: React.FC = () => {
                     <p>Digite o nome da família exatamente</p>
                     <p>como está no verso do convite</p>
                     <input type="text" value={codFamilia} onChange={e => setCodFamilia(e.target.value)}/>
-                    <button onClick={buscarFamilia}>Buscar</button>
+                    <button id="buscar_familia" onClick={buscarFamilia}>Buscar</button>
                 </div>
             )}
             {state === RsvpState.ConfirmingGuests && (
@@ -99,7 +99,7 @@ export const RSVP: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    <button className="guest_save" onClick={onSaveGuests}>Salvar</button>
+                    <button id="salvar_familia" className="guest_save" onClick={onSaveGuests}>Salvar</button>
                 </div>
             )}
             {state === RsvpState.Loading && (

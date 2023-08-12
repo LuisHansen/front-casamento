@@ -227,6 +227,7 @@
 
             const pix = document.querySelector('#link-pix');
             pix.setAttribute('href', presentes[id_presente].pix_link);
+            pix.setAttribute('data-presente-pix', id_presente);
 
             const cartao = document.querySelector('#link-cartao');
             if (presentes[id_presente].cartao_link) {
@@ -234,6 +235,7 @@
                 cartao.classList.remove('hidden');
                 cartao.setAttribute('aria-hidden', 'false');
                 cartao.setAttribute('hidden', 'false');
+                cartao.setAttribute('data-presente-cartao', id_presente);
             } else {
                 cartao.classList.add('hidden');
                 cartao.setAttribute('aria-hidden', 'true');
@@ -243,7 +245,6 @@
 
         window.onload = () => {
            const divPresentes = document.querySelectorAll('.item-presente');
-           console.log('itens', divPresentes);
            divPresentes.forEach(el => {
                el.addEventListener('click', e => {
                    // e.stopPropagation();
